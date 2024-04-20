@@ -1,0 +1,147 @@
+//randomaizing
+#include <cstdlib>
+#include <ctime>
+srand(static_cast<unsigned int>(time(0)));
+rand();
+
+switch(value = enum, int, char)
+
+//arrays
+string.find();
+string.size();
+string.length();
+string.empty();
+string.erase();
+string::npos;
+char phrase[81] = "GAMEOVER!!!"; - C string
+
+//arrays
+#include <string>
+#include <vector>
+vector<string> inventory
+vector<string> inventory(10, "N");
+vector<string> inventory(myArray);
+inventory.push_back();
+inventory.pop_back();
+inventory.clear();
+inventory.empty();
+inventory.insert();
+void function(const vector<string> &vec) - reference
+
+auto array[] = {};
+for(int i : array) {std::cout << i << std::endl;}
+for(int i = 0; i < sizeof(array) / sizeof(int)) {std::cout << array[i] << std::endl;}
+
+//iterator
+vector<string>::iterator myIt;
+vector<string>::const_iterator iter;
+inventory.begin();
+inventory.end();
+myIt = inventory.begin();
+*myIt = "battle axe";
+(*myIt).size(); == myIt -> size();
+
+//pointer
+int *pVariable{nullptr(0, NULL)};
+int* const pVariable = &variable; - pointer = reference(take adress in memory)
+variable = 1;
+pVariable = &variable; 
+
+const int* const pBONUS = &BONUS: 
+int *const р{&i}; - edit
+const int *p; - no edit
+const int *const р {&I}; - no dereferencing, no edit
+std::cout<<*highScores<<std::endl;
+std::cout<<*(highScores+1)<<std::endl;
+
+typedef unsigned short int ushort;
+unsigned long int = 4294967295;
+using ulong = unsigned short int ushort;
+
+enum Nameof {value};
+Nameof myValue = value;
+
+//standart function main
+#include <iostream>
+using std::cout;
+auto main(int argc, char *argv[]) -> decltype(0) {
+   return 0;
+}
+
+//
+#include <algorithm>
+random_shuffle(scores.begin(), scores.end());
+find(scores.begin(), scores.end(), score);
+sort(scores.begin(), scores.end());
+count(board.begin(), board.end(), EMPTY) == 0 - give the number of range;
+
+//size of vector<int> reserving memory
+vector<int>scores(10, 0);
+
+std::cout << scores.size() << std::endl;
+std::cout << scores.capacity() << std::endl;
+scores.reserve(11);
+scores.push_back(0);
+std::cout << scores.size() << std::endl;
+std::cout << scores.capacity() << std::endl;
+
+//class
+class Critter {
+   public: static s_Total;
+   private: int m_Hunger;
+   protected: short m_Hunger;
+   friend void;
+   void virtual function() const {};
+   friend std::ostream &operator <<(std::ostream &os, const Critter &aCritter);
+   ostream == cout;
+   << - overload
+};
+int Critter::s_Total = 0;
+Critter::Critter(int hunger) : m_Hunger(hunger) {}
+s_ - open type
+m_ - close type
+a - aggregation
+p - pointer
+struct;
+~destructor;
+
+
+// dynamic memory
+int *pTemp = new int;
+delete pTemp;
+int pTemp = 0;
+
+toupper() - uppercase;
+inline int function(int arg) {} - inline function(can to increase speed  )
+
+//char as a number
+unsigned char soso {255};
+std::cout << static_cast<unsigned char>(soso) || (unsigned int)soso;
+
+typeid().name()
+short number {23'234};
+sizeof(array) / sizeof(array[0]);
+;
+
+//multiply line
+std::string name
+getline(std::cin, name);
+std::cin.getline(text, maxlength, '!');
+
+//C++17
+if(int c{a-b}, a > b)
+switch(int c{a-b}, op)
+
+
+
+BOOK: 4.1 STL
+
+Если вы хотите защитить объект, на который направлен указатель, - ограничьте сам указатель. 
+Возвращайте либо указатель на константу, либо константный указатель на константу.
+
+Eсли вы пишете класс, имеющий член данных, который указывает на память в куче, следует 
+написать перегруженный оператор присваивания для класса. 
+Есnи вы пишете класс, члены данных которого указывают на память в куче, вам сnедует написать 
+конструктор копирования, который выделяет память для нового объекта и создает глубокую копию. 
+Если вы пишете класс, который будет выделять память в куче, напишите для него деструктор, 
+который будет освобождать и очищать эту память.
